@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sam 🎉</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 25px;
+  padding: 5vw 7vw;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 2;
+  animation: cardPop 1s ease;
+  max-width: 600px;
+  width: 90%;
+}
+@keyframes cardPop {
+  from {transform: scale(0.8); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #fff;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px #ff80ab,
+    0 0 30px #ff4081,
+    0 0 40px #ff80ab,
+    0 0 60px #ff4081;
+  animation: pulse 2s infinite alternate;
+  margin: 0;
+}
+@keyframes pulse {
+  0% {text-shadow: 0 0 10px #fff,0 0 20px #ff80ab,0 0 30px #ff4081,0 0 40px #ff80ab,0 0 60px #ff4081;}
+  50% {text-shadow: 0 0 15px #fff,0 0 30px #ff80ab,0 0 45px #ff4081,0 0 60px #ff80ab,0 0 90px #ff4081;}
+  100% {text-shadow: 0 0 10px #fff,0 0 20px #ff80ab,0 0 30px #ff4081,0 0 40px #ff80ab,0 0 60px #ff4081;}
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: #ff69b4; /* Neon Pink */
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #ff69b4,
+    0 0 20px #ff1493,
+    0 0 30px #ff69b4,
+    0 0 40px #ff1493,
+    0 0 55px #ff69b4,
+    0 0 75px #ff1493;
+  animation: pinkGlow 2s infinite alternate;
+  margin: 15px 0;
+}
+@keyframes pinkGlow {
+  from {
+    text-shadow: 0 0 5px #fff,0 0 10px #ff69b4,0 0 20px #ff1493,0 0 30px #ff69b4,0 0 40px #ff1493,0 0 55px #ff69b4,0 0 75px #ff1493;
+  }
+  to {
+    text-shadow: 0 0 10px #fff,0 0 20px #ff69b4,0 0 30px #ff1493,0 0 40px #ff69b4,0 0 60px #ff1493,0 0 80px #ff69b4,0 0 100px #ff1493;
+  }
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: #fff;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+.heart {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  animation: heartbeat 1.5s infinite;
+}
+@keyframes heartbeat {
+  0%,100% { transform: scale(1);}
+  50% { transform: scale(1.4);}
+}
+
+/* Balloons */
+.balloon {
+  position: absolute;
+  bottom: -120px;
+  width: 40px;
+  height: 60px;
+  border-radius: 50% 50% 50% 50%;
+  animation: floatUp 8s infinite ease-in;
+}
+.balloon::after {
+  content:"";
+  position: absolute;
+  width:2px; height:50px; background:#555;
+  top:60px; left:50%; transform:translateX(-50%);
+}
+@keyframes floatUp {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-120vh);}
+}
+
+/* Confetti */
+.confetti {
+  position: absolute;
+  width: 8px; height: 8px;
+  background: gold;
+  top: -10px;
+  animation: fall 4s linear infinite;
+  border-radius:50%;
+}
+@keyframes fall {
+  0% {transform: translateY(0) rotate(0deg);}
+  100% {transform: translateY(100vh) rotate(360deg);}
+}
+
+/* Sparkle particles behind card */
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  animation: sparkleAnim 3s infinite linear;
+}
+@keyframes sparkleAnim {
+  0% {transform: translate(-50%, -50%) scale(1);}
+  50% {transform: translate(calc(-50% + 80px), calc(-50% - 80px)) scale(1.5);}
+  100% {transform: translate(-50%, -50%) scale(1);}
+}
+
+</style>
+</head>
+<body>
+  <!-- Balloons -->
+  <div class="balloon" style="left:10%; background: radial-gradient(circle at 30% 30%, #ff6699, #cc0066); animation-delay:0s;"></div>
+  <div class="balloon" style="left:30%; background: radial-gradient(circle at 30% 30%, #66ccff, #0066cc); animation-delay:1.5s;"></div>
+  <div class="balloon" style="left:50%; background: radial-gradient(circle at 30% 30%, #99ff99, #00cc66); animation-delay:3s;"></div>
+  <div class="balloon" style="left:70%; background: radial-gradient(circle at 30% 30%, #ffcc66, #ff6600); animation-delay:0.8s;"></div>
+  <div class="balloon" style="left:90%; background: radial-gradient(circle at 30% 30%, #ff99cc, #cc3399); animation-delay:2.5s;"></div>
+
+  <!-- Confetti -->
+  <div class="confetti" style="left:15%;"></div>
+  <div class="confetti" style="left:35%; background:pink;"></div>
+  <div class="confetti" style="left:55%; background:lightblue;"></div>
+  <div class="confetti" style="left:75%; background:lime;"></div>
+  <div class="confetti" style="left:90%; background:violet;"></div>
+
+  <!-- Sparkle -->
+  <div class="sparkle"></div>
+
+  <!-- Card -->
+  <div class="card">
+    <h1>🎉 Happy Birthday Sam 🎉</h1>
+    <h2>🌸 To My Forever Friend Samruddhi 🌸</h2>
+    <p>
+      To the friend who makes every day brighter ✨  
+      Sam, you are my forever buddy, the one who adds fun to every moment,  
+      and makes life brighter just by being in it. 💕  
+      On your birthday, I just wish your life sparkles  
+      with joy, laughter, and all your beautiful dreams coming true. 🌈  
+    </p>
+    <h2 class="heart">💖🎂🎁🎈</h2>
+  </div>
+</body>
+</html>
